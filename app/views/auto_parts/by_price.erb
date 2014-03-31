@@ -1,0 +1,47 @@
+#app/views/auto_parts/by_price.html.erb
+
+<h1>All Vehicle Make Parts</h1>
+
+<table>
+
+ <thead>
+
+  <tr>
+
+   <th>Price</th>
+
+   <th>Name</th>
+
+   <th>Description</th>
+
+   <th>Vehicle make</th>
+
+   <th>Vehicle model</th>
+
+  </tr>
+
+ </thead>
+
+ <tbody>
+
+  <% @auto_parts.each do |auto_part| %>
+
+   <tr>
+   
+   	<td><%= auto_part.price %></td>
+
+    <td><%= auto_part.name %></td>
+
+    <td><%= auto_part.description %></td>
+
+    <td><%= auto_part.vehicle_make %></td>
+
+    <td><%= auto_part.vehicle_model %></td>
+
+   </tr>
+
+  <% end %>
+
+ </tbody>
+
+</table>

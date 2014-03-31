@@ -1,0 +1,35 @@
+<h1>Listing auto_parts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Vehicle make</th>
+      <th>Vehicle model</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @auto_parts.each do |auto_part| %>
+      <tr>
+        <td><%= auto_part.name %></td>
+        <td><%= auto_part.description %></td>
+        <td><%= auto_part.price %></td>
+        <td><%= auto_part.vehicle_make %></td>
+        <td><%= auto_part.vehicle_model %></td>
+        <td><%= link_to 'Show', auto_part %></td>
+        <td><%= link_to 'Edit', edit_auto_part_path(auto_part) %></td>
+        <td><%= link_to 'Destroy', auto_part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Auto part', new_auto_part_path %>

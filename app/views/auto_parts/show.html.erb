@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @auto_part.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @auto_part.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @auto_part.price %>
+</p>
+
+<p>
+  <strong>Vehicle make:</strong>
+  <%= @auto_part.vehicle_make %>
+</p>
+
+<p>
+  <strong>Vehicle model:</strong>
+  <%= @auto_part.vehicle_model %>
+</p>
+
+<%= link_to 'Edit', edit_auto_part_path(@auto_part) %> |
+<%= link_to 'Back', auto_parts_path %>
